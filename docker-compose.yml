@@ -1,5 +1,5 @@
 # SSL certificates for development
-# $ mkcert yurii-zhuravlov-232.local www.yurii-zhuravlov-232.local
+# $ mkcert yurii-zhuravlov-232.local www.yurii-zhuravlov-232.local magento-dev.local www.magento-dev.local
 #
 # DEVELOPMENT:
 # $ docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d
@@ -24,15 +24,15 @@ services:
     restart: always
     labels:
       # - traefik.enable=false
-      - traefik.http.frontend.rule=Host:yurii-zhuravlov-232.local,www.yurii-zhuravlov-232.local
+      - traefik.http.frontend.rule=Host:yurii-zhuravlov-232.local,www.yurii-zhuravlov-232.local,magento-dev.local,www.magento-dev.local
       - traefik.http.frontend.entryPoints=http
-      - traefik.https.frontend.rule=Host:yurii-zhuravlov-232.local,www.yurii-zhuravlov-232.local
+      - traefik.https.frontend.rule=Host:yurii-zhuravlov-232.local,www.yurii-zhuravlov-232.local,magento-dev.local,www.magento-dev.local
       - traefik.https.frontend.entryPoints=https
       - traefik.https.protocol=https
       - traefik.https.port=443
     # Must add extra_hosts to be written to /etc/hosts - otherwise containerized application can not curl itself
     extra_hosts:
-      - "yurii-zhuravlov-232.local www.yurii-zhuravlov-232.local:127.0.0.1"
+      - "yurii-zhuravlov-232.local www.yurii-zhuravlov-232.local magento-dev.local www.magento-dev.local:127.0.0.1"
 #    links:
 #      - memcached
     external_links:
