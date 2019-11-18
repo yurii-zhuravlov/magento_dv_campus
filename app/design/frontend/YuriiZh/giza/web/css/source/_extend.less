@@ -3,18 +3,27 @@
 /* 1. Header & footer */
 @header-panel__background-color: @color-dark-blue;
 @copyright__background-color: @color-dark-blue;
-@navigation__background: @color-blue1;
-@footer__background-color: @color-blue1;
+@navigation-desktop__background: @color-blue1;
+& when (@media-common = false) {
+    .nav-sections {
+        .lib-css(background, @navigation-desktop__background);
+    }
+}
 @navigation-desktop-level0-item__color: @color-yellow-light1;
 @navigation-desktop-level0-item__hover__color: @color-yellow-light2;
 @submenu-desktop__background: @color-blue3;
 @submenu-desktop-item__hover__background: @color-blue1;
+@footer__background-color: @color-blue1;
 @footer-links-color: @color-yellow-light1;
 @footer-links-color-hover: @color-yellow-light2;
-@button-primary__background: @color-very-dark-gray;
-@button-primary__hover__background: @color-dark-blue;
-@button-primary__border: 1px solid @color-very-dark-gray;
-@button-primary__hover__border: 1px solid @color-dark-blue;
+.block.newsletter .action.subscribe {
+    background-color: darken(@theme__color__primary, 10%);
+    border: 1px solid darken(@theme__color__primary, 10%);
+    &:hover {
+        background-color: darken(@theme__color__primary-alt, 10%);
+        border: 1px solid darken(@theme__color__primary-alt, 10%);
+    }
+}
 /* 2. Tabs */
 @tab-control__background-color: @color-dark-blue;
 @tab-content__background-color: @color-white;
@@ -22,9 +31,23 @@
 @tab-control__active__color: @color-yellow-light2;
 @tab-control__color: @color-yellow-light1;
 /* 3. Links */
-@link__color: @color-orange-red1;
-@link__hover__color: @color-orange-red1;
-@link__visited__color: @color-orange-red1;
+.lib-link(
+    @_link-color: @color-orange-red1,
+    @_link-color-visited: @color-orange-red1,
+    @_link-color-hover: darken(@color-orange-red1, 10%),
+    @_link-color-active: @_link-color-hover
+) {
+    .lib-css(color, @_link-color);
+    &:visited {
+        .lib-css(color, @_link-color-visited);
+    }
+    &:hover {
+        .lib-css(color, @_link-color-hover);
+    }
+    &:active {
+        .lib-css(color,@_link-color-active);
+    }
+}
 /* 4. Messages */
 @message-success__color: @color-dark-blue;
 @message-success__background: lighten(@message-success-icon__color-inner, 50%);
