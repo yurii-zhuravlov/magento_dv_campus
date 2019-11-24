@@ -1,7 +1,7 @@
 module.exports = {
     YuriiZh_giza_en_US: {
         area: 'frontend',
-        name: 'Yuriizh/giza',
+        name: 'YuriiZh/giza',
         locale: 'en_US',
         files: [
             'css/styles-m',

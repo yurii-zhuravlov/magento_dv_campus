@@ -245,7 +245,6 @@ return [
         'MSP_TwoFactorAuth' => 1,
         'Temando_Shipping' => 1,
         'Vertex_Tax' => 1,
-        'Yotpo_Yotpo' => 1,
-        'YuriiZh_Layouts' => 0
+        'Yotpo_Yotpo' => 1
     ]
 ];
