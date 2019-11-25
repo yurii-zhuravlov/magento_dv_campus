@@ -143,8 +143,8 @@
     Options +FollowSymLinks
     RewriteEngine on
 
-    SetEnvIf Host .*yurii-zhuravlov-232.local.* MAGE_RUN_CODE=base
-    SetEnvIf Host .*yurii-zhuravlov-232.local.* MAGE_RUN_TYPE=website
+    SetEnvIf Host .*yurii-zhuravlov.local.* MAGE_RUN_CODE=base
+    SetEnvIf Host .*yurii-zhuravlov.local.* MAGE_RUN_TYPE=website
 
     SetEnvIf Host .*magento-dev.local.* MAGE_RUN_CODE=new_website
     SetEnvIf Host .*magento-dev.local.* MAGE_RUN_TYPE=website

@@ -11,9 +11,9 @@ return [
         'connection' => [
             'default' => [
                 'host' => 'mysql',
-                'dbname' => 'yurii_zhuravlov_232_local',
-                'username' => 'yurii_zhuravlov_232_local',
-                'password' => 'yurii_zhuravlov_232_local',
+                'dbname' => 'yurii_zhuravlov_local',
+                'username' => 'yurii_zhuravlov_local',
+                'password' => 'yurii_zhuravlov_local',
                 'model' => 'mysql4',
                 'engine' => 'innodb',
                 'initStatements' => 'SET NAMES utf8;',
