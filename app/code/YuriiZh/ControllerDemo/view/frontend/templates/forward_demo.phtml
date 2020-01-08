@@ -1,0 +1,6 @@
+<?php /** @var \YuriiZh\ControllerDemo\Block\Demo $block */
+    $fullName = $block->getFullName();
+    $repositoryUrl = $block->getRepositoryUrl();
+?>
+<div>Full name: <?= $fullName ?></div>
+<div>Repository URL: <a href="<?= $repositoryUrl ?>" target="_blank"><?= $repositoryUrl ?></a></div>

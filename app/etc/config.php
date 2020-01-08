@@ -246,6 +246,7 @@ return [
         'Temando_Shipping' => 1,
         'Vertex_Tax' => 1,
         'Yotpo_Yotpo' => 1,
-        'YuriiZh_Cms' => 1
+        'YuriiZh_Cms' => 1,
+        'YuriiZh_ControllerDemo' => 1
     ]
 ];
