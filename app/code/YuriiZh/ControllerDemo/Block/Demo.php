@@ -18,14 +18,20 @@ class Demo extends \Magento\Framework\View\Element\Template
         parent::__construct($context);
     }
 
-    public function getFullName()
+    /**
+     * @return string
+     */
+    public function getFullName(): string
     {
         return $this->getRequest()->getParam('firstName')
             . ' '
             . $this->getRequest()->getParam('lastName');
     }
 
-    public function getRepositoryUrl()
+    /**
+     * @return string
+     */
+    public function getRepositoryUrl(): string
     {
         return $this->getRequest()->getParam('repositoryUrl');
     }

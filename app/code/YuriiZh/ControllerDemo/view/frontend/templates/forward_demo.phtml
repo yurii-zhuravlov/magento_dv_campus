@@ -1,6 +1,12 @@
 <?php /** @var \YuriiZh\ControllerDemo\Block\Demo $block */
-    $fullName = $block->getFullName();
-    $repositoryUrl = $block->getRepositoryUrl();
+    $repositoryUrl = $block->escapeUrl($block->getRepositoryUrl());
 ?>
-<div>Full name: <?= $fullName ?></div>
-<div>Repository URL: <a href="<?= $repositoryUrl ?>" target="_blank"><?= $repositoryUrl ?></a></div>
+<div class="full-name"><?= $block->escapeHtml(__('Full name:')) ?>
+    <?= $block->escapeHtml($block->getFullName()) ?>
+</div>
+<div class="repository-url">
+    <?= $block->escapeHtml(__('Repository URL:')) ?>
+    <a href="<?= $repositoryUrl ?>" target="_blank">
+        <?= $repositoryUrl ?>
+    </a>
+</div>

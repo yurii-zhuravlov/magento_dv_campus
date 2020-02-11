@@ -21,14 +21,14 @@ class Forward extends \Magento\Framework\App\Action\Action implements
         /** @var ForwardResult $response */
         $response = $this->resultFactory->create(ResultFactory::TYPE_FORWARD);
         $response->setModule(
-            'YuriiZh_ControllerDemo')
-            ->setParams([
-                '_secure' => true,
-                'firstName' => 'Yurii',
-                'lastName' => 'Zhuravlov',
-                'repositoryUrl' => 'https://github.com/yurii-zhuravlov/magento_dv_campus'
-            ])
-            ->forward('data');
+            'YuriiZh_ControllerDemo'
+        )->setParams([
+            '_secure' => true,
+            'firstName' => 'Yurii',
+            'lastName' => 'Zhuravlov',
+            'repositoryUrl' => 'https://github.com/yurii-zhuravlov/magento_dv_campus'
+        ])
+        ->forward('data');
 
         return $response;
     }
